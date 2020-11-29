@@ -254,7 +254,7 @@ if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     img_test = Image.open(BytesIO(file_bytes))
     st.image(img_test,channels="RGB")          
-    net=torch.load("6",map_location=torch.device('cpu'))
+    net=torch.load("6.pkl",map_location=torch.device('cpu'))
     net.eval()
     img_PIL_Tensor =transform_test(img_test)
     X=img_PIL_Tensor

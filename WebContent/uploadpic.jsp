@@ -20,6 +20,56 @@
 	margin-left: -200px;
 }
 </style>
+<style>
+#upload_click{ margin-top:32px; height:40px;}
+#upload_click a 
+{
+    
+ 
+    text-decoration:none;
+	background:#2f435e;
+	color:#f2f2f2;
+	
+	padding: 10px 30px 10px 30px;
+	font-size:16px;
+	font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
+	font-weight:bold;
+	border-radius:3px;
+	
+	-webkit-transition:all linear 0.30s;
+	-moz-transition:all linear 0.30s;
+	transition:all linear 0.30s;
+	
+	}
+   #upload_click a:hover { background:#385f9e; }
+   
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+</style>
 </head>
 <body>
 	<%
@@ -101,9 +151,9 @@
 		}
 	%>
 	<div class="container">
-		<form action="uploadpic.jsp" enctype="multipart/form-data" method="post"
+		<form action="uploadpic.jsp" enctype="multipart/form-data" method="post" id="up"
 			>
-			<table>
+			<table align="center">
 				<tr>
 					<td>
 						<img src="<%=imageUrl%>" alt="图片为空" id="image" width="400px" height="225px" align="middle">
@@ -111,13 +161,17 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="file" name="File" id="File" onchange="changeFile()" required="true">
+					<a href="javascript:;" class="file">
+						<input type="file" name="File" id="File" onchange="changeFile()" required="true">选择需要上传的图片
+					</a>
 					</td>
 					
 				</tr>
 				<tr>
 					<td>
-						<button type="submit">上传</button>
+					<div id="upload_click">
+						<a href="#" οnclick="document.getelementbyid('up').submit();return false;">提交</a>
+					</div>
 					</td>
 				</tr>
 			</table>

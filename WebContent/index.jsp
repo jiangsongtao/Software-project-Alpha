@@ -11,6 +11,7 @@
 	height:300px;
     margin: 20px;
     overflow: hidden;
+    bottom: 50px;
     left: 50%;
     margin-left: -200px;
     position: absolute;

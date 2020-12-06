@@ -11,7 +11,7 @@
 	height:300px;
     margin: 20px;
     overflow: hidden;
-    bottom: 50px;
+    bottom: 10px;
     left: 50%;
     margin-left: -200px;
     position: absolute;
@@ -31,6 +31,14 @@
     float: left;
 }
 </style>
+
+<style>
+.getp{
+ position:relative;
+ bottom:5px
+}
+</style>
+
 </head>
  <style type="text/css">
 html{
@@ -43,14 +51,15 @@ body{
        margin: 0;
 }
 </style>
+
 <body>
 <div class="header"><strong><font size=10>鸟类识别</font></strong></div>
-<table width="900" border="0" align="center" cellpadding="0"
+<div class="header"><strong><font size=10><jsp:include flush="fasle"
+					page="getposition.html" /></font></strong></div>
+					
+<div class="getp"><jsp:include flush="fasle" page="uploadpic.jsp" /></div>
+<table width="900" border="0" align="center" bottom="100px" cellpadding="0"
 		cellspacing="0">
-		<tr>
-			<td align="left" valign="top"><jsp:include flush="fasle"
-					page="uploadpic.jsp" /></td>
-		</tr>
 		<tr>
 			<td height="50"></td>
 

@@ -262,7 +262,7 @@ if uploaded_file is not None:
     X=X.cpu()
     net = net.cpu()
     st.button("点击按钮开始多鸟识别")
-    if(st.button("点击按钮开始识别")):
+    #if(st.button("点击按钮开始识别")):
         output = net(X)
         output = torch.softmax(output, dim=1)
         vals_try,pred_try = torch.max(output,dim=1)

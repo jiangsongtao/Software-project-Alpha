@@ -261,7 +261,7 @@ if uploaded_file is not None:
     X=X.unsqueeze_(0) 
     X=X.cpu()
     net = net.cpu()
-    #st.button("点击按钮开始多鸟识别")
+    st.button("点击按钮开始多鸟识别")
     if(st.button("点击按钮开始识别")):
         output = net(X)
         output = torch.softmax(output, dim=1)
